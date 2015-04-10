@@ -1,6 +1,6 @@
 # SpotifyController
 
-Swift interface to the commands defined in the Spotify app's scripting definition file: `/Applications/Spotify.app/Contents/Resources/Spotify.sdef`
+Swift interface to the commands defined in the Spotify app's scripting definition file: [`/Applications/Spotify.app/Contents/Resources/Spotify.sdef`](https://gist.github.com/benzguo/88e81793b1295537ef80)
 
 ### Examples
 ```Swift
