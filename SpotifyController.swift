@@ -116,7 +116,7 @@ class SpotifyController {
     class func play() { task("play") }
 
     /// Play the given spotify URL.
-    class func play(spotifyURL: String) { task("play track \(spotifyURL)") }
+    class func play(spotifyURL: String) { task("play track \"\(spotifyURL)\"") }
 
     /// Skip to the next track.
     class func nextTrack() { task("next track") }
