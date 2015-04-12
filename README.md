@@ -1,6 +1,7 @@
 # SpotifyController
 
-Swift interface to the commands defined in the Spotify app's scripting definition file: [`/Applications/Spotify.app/Contents/Resources/Spotify.sdef`](https://gist.github.com/benzguo/88e81793b1295537ef80)
+Swift interface to the commands defined in the Spotify app's scripting definition file: 
+[`/Applications/Spotify.app/Contents/Resources/Spotify.sdef`](https://gist.github.com/benzguo/88e81793b1295537ef80)
 
 ### Examples
 ```Swift
@@ -10,6 +11,7 @@ SpotifyController.nextTrack()
 SpotifyController.previousTrack()
 SpotifyController.pause()
 SpotifyController.play()
+SpotifyController.play("spotify:album:4BnNSzOWadogStvyYshJIo")
 ```
 
 ### References
