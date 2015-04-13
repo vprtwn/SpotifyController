@@ -99,7 +99,7 @@ class SpotifyController {
     class func currentTrackDuration() -> Int? { return trackInfoTask("duration")?.toInt() }
 
     /// The number of times this track has been played.
-    /// Note: This is the number of times the current user has played the track.
+    /// Note: This is the number of times the current user has played the track, and does not update immediately.
     class func currentTrackPlayCount() -> Int? { return trackInfoTask("played count")?.toInt() }
 
     /// How popular is this track? 0-100
