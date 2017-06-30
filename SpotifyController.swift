@@ -86,6 +86,9 @@ class SpotifyController {
   /// The album of the track.
   class func currentTrackAlbum() -> String? { return trackInfoTask(command: "album") }
   
+  /// The album artwork URL of the track.
+  class func currentTrackAlbumArtworkUrl() -> String? { return trackInfoTask(command: "artwork url") }
+  
   /// The track number of the track.
   class func currentTrackNumber() -> Int? { return Int((trackInfoTask(command: "track number"))!) }
   
@@ -105,9 +108,6 @@ class SpotifyController {
   /// How popular is this track? 0-100
   class func currentTrackPopularity() -> Int? { return Int((trackInfoTask(command: "popularity"))!) }
   
-  // The album artwork of the track
-  class func currentTrackAlbumArtworkUrl() -> String? { return trackInfoTask(command: "artwork url") }
-  
   /// Is the track starred?
   class func currentTrackIsStarred() -> Bool? { return trackInfoTask(command: "starred")?.contains("true") }
   
@@ -126,6 +126,20 @@ class SpotifyController {
   
   /// Skip to the previous track.
   class func previousTrack() { task(command: "previous track") }
+  
+  /// Set volume of Spotify app. (0 = minimum, 100 = maximum)
+  class func setVolume(volume: Int) {
+    var volumeToSet = volume
+    if volumeToSet > 100 {
+      volumeToSet = 100
+    }
+    
+    if volumeToSet < 0 {
+      volumeToSet = 0
+    }
+    
+    task(command: "set sound volume to \(volumeToSet)")
+  }
   
   // MARK: Standard app commands
   class func quit() { task(command: "quit") }
